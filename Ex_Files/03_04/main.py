@@ -26,9 +26,12 @@ with open("laureates.csv", "r") as f:
 # 2. You can add to a list using
 #      my_list.append("something")
 
-laureates_beginning_with_a = []
-# LinkedIn learner code here
+laureates_beginning_with_b = []
+# LinkedIn learner code here - Adapted to see if changing first letter from "A" to "B" worked just as well = success!
+for laureate in laureates:
+    if laureate['name'][0] == "B":
+        laureates_beginning_with_b.append(laureate)
 
 
 with open("laureates.json", "w") as f:
-    json.dump(laureates_beginning_with_a, f, indent=2)
+    json.dump(laureates_beginning_with_b, f, indent=2)
